@@ -25,7 +25,7 @@ git config --list --show-origin
 
 GIt 基本流程图: 
 
-![image-20231210152307822](https://github.com/Junhiee/picx-images-hosting/raw/master/markdown/image-20231210152307822.3k7sw4junn.webp)
+![image-20231210152307822](https://github.com/koko-t7i/picx-images-hosting/raw/master/markdown/image-20231210152307822.3k7sw4junn.webp)
 
 在已存在的目录中初始化 Git 仓库
 
@@ -69,7 +69,7 @@ git rest --sort <files>
 git status
 ```
 
-![文件状态变化周期示意图](https://github.com/Junhiee/picx-images-hosting/raw/master/markdown/image-20231201222041546.231nudfpwu.webp)
+![文件状态变化周期示意图](https://github.com/koko-t7i/picx-images-hosting/raw/master/markdown/image-20231201222041546.231nudfpwu.webp)
 
 新建并切换到分支:
 
@@ -105,7 +105,7 @@ git branch -d testing
 git init git-exampel
 ```
 
-![image-20231210152047472](https://github.com/Junhiee/picx-images-hosting/raw/master/markdown/image-20231210152047472.7i06csuvan.webp)
+![image-20231210152047472](https://github.com/koko-t7i/picx-images-hosting/raw/master/markdown/image-20231210152047472.7i06csuvan.webp)
 
 2. 监测 .git 文件夹的变化，按照 0.5 秒的轮询频率
 
@@ -113,7 +113,7 @@ git init git-exampel
 watch -n .5 tree .git
 ```
 
-![监测 .git 文件状态](https://github.com/Junhiee/picx-images-hosting/raw/master/markdown/image-20231210152743611.13lkh7cyr8.webp)
+![监测 .git 文件状态](https://github.com/koko-t7i/picx-images-hosting/raw/master/markdown/image-20231210152743611.13lkh7cyr8.webp)
 
 3. 在 git-example 下新建 1.txt 文件输入内容 1
 
@@ -127,7 +127,7 @@ echo 1 > 1.txt
 git add 1.txt
 ```
 
-![image-20231210153509059](https://github.com/Junhiee/picx-images-hosting/raw/master/markdown/image-20231210153509059.1lbm5secc7.webp)
+![image-20231210153509059](https://github.com/koko-t7i/picx-images-hosting/raw/master/markdown/image-20231210153509059.1lbm5secc7.webp)
 
 5. 将 1.txt 添加到本地仓库，这里把 hook 文件夹删除了，方便我们观察 objects 文件
 
@@ -135,7 +135,7 @@ git add 1.txt
 git commit -m "first commit"
 ```
 
-![image-20231210154004529](https://github.com/Junhiee/picx-images-hosting/raw/master/markdown/image-20231210154004529.8z6bejz01n.webp)
+![image-20231210154004529](https://github.com/koko-t7i/picx-images-hosting/raw/master/markdown/image-20231210154004529.8z6bejz01n.webp)
 
 6. 我们观察 `git add` 和 `git commit` 命令下都发生了什么
 
@@ -160,17 +160,17 @@ git cat-file -t 89bec1
 git cat-file -p 89bec1
 ```
 
-![image-20231210162905465](https://github.com/Junhiee/picx-images-hosting/raw/master/markdown/image-20231210162905465.9nzkykmj28.webp)
+![image-20231210162905465](https://github.com/koko-t7i/picx-images-hosting/raw/master/markdown/image-20231210162905465.9nzkykmj28.webp)
 
 示意图：
 
-![image-20231210164227195](https://github.com/Junhiee/picx-images-hosting/raw/master/markdown/image-20231210164227195.26l9s38sn6.webp)
+![image-20231210164227195](https://github.com/koko-t7i/picx-images-hosting/raw/master/markdown/image-20231210164227195.26l9s38sn6.webp)
 
 7. 分支
 
 之前我们的操作都是在 master 分支上进行的，查看一下 master 分支的 head 指向，可以看到指向了最新的 commit object
 
-![image-20231210170040621](https://github.com/Junhiee/picx-images-hosting/raw/master/markdown/image-20231210170040621.4jnw9amltw.webp)
+![image-20231210170040621](https://github.com/koko-t7i/picx-images-hosting/raw/master/markdown/image-20231210170040621.4jnw9amltw.webp)
 
 现在我们新建一个 testing 分支，并切换到 testing，查看其head指向
 
@@ -181,11 +181,11 @@ git checkout -b testing
 cat .git/refs/heads/testing
 ```
 
-![image-20231210170452139](https://github.com/Junhiee/picx-images-hosting/raw/master/markdown/image-20231210170452139.3d4l0oxp8l.webp)
+![image-20231210170452139](https://github.com/koko-t7i/picx-images-hosting/raw/master/markdown/image-20231210170452139.3d4l0oxp8l.webp)
 
 在 testing 分支下进行 `git add` `git commit` 操作
 
-![image-20231210172249356](https://github.com/Junhiee/picx-images-hosting/raw/master/markdown/image-20231210172249356.3go6yeqryf.webp)
+![image-20231210172249356](https://github.com/koko-t7i/picx-images-hosting/raw/master/markdown/image-20231210172249356.3go6yeqryf.webp)
 
 查看 testing 的 head 指向，可以看到testing 分支的 head 指向了最新的一个 commit object
 
@@ -194,11 +194,11 @@ cat .git/refs/heads/testing
 git cat-file -p 7e2f6
 ```
 
-![image-20231210174706442](https://github.com/Junhiee/picx-images-hosting/raw/master/markdown/image-20231210174706442.pf4qc4nwp.webp)
+![image-20231210174706442](https://github.com/koko-t7i/picx-images-hosting/raw/master/markdown/image-20231210174706442.pf4qc4nwp.webp)
 
 多了以个指向前一个版本 commit object 的 parent 指针
 
-![image-20231210175344281](https://github.com/Junhiee/picx-images-hosting/raw/master/markdown/image-20231210175344281.4n7i70foju.webp)
+![image-20231210175344281](https://github.com/koko-t7i/picx-images-hosting/raw/master/markdown/image-20231210175344281.4n7i70foju.webp)
 
 8. 切换为 master 分支，进行第二次提交
 
@@ -209,7 +209,7 @@ git add 3.txt
 git commit -m "third commit"
 ```
 
-![image-20231210201558856](https://github.com/Junhiee/picx-images-hosting/raw/master/markdown/image-20231210201558856.1756ex61hn.webp)
+![image-20231210201558856](https://github.com/koko-t7i/picx-images-hosting/raw/master/markdown/image-20231210201558856.1756ex61hn.webp)
 
 此时 master 和 testing 都在各自分支上进行了版本迭代
 
@@ -219,7 +219,7 @@ git commit -m "third commit"
 git merge testing
 ```
 
-![image-20231210203426221](https://github.com/Junhiee/picx-images-hosting/raw/master/markdown/image-20231210203426221.b8ozgwd1o.webp)
+![image-20231210203426221](https://github.com/koko-t7i/picx-images-hosting/raw/master/markdown/image-20231210203426221.b8ozgwd1o.webp)
 
 9. 遇到冲突时如何合并，如对同一个文件同一处地方进行了修改
    
@@ -246,22 +246,22 @@ git merge testing
 # Automatic merge failed; fix conflicts and then commit the result.
 ```
 
-![image-20231210205812489](https://github.com/Junhiee/picx-images-hosting/raw/master/markdown/image-20231210205812489.3go6yeqryl.webp)
+![image-20231210205812489](https://github.com/koko-t7i/picx-images-hosting/raw/master/markdown/image-20231210205812489.3go6yeqryl.webp)
 
 打开冲突文件手动修改文件，删除掉 <<<< ===== >>>> 等标记，手动修改成想要合并的代码
 
-![image-20231210211234694](https://github.com/Junhiee/picx-images-hosting/raw/master/markdown/image-20231210211234694.361d59bjta.webp)
+![image-20231210211234694](https://github.com/koko-t7i/picx-images-hosting/raw/master/markdown/image-20231210211234694.361d59bjta.webp)
 
 修改成
 
-![image-20231210212004029](https://github.com/Junhiee/picx-images-hosting/raw/master/markdown/image-20231210212004029.5c0rr137kf.webp)
+![image-20231210212004029](https://github.com/koko-t7i/picx-images-hosting/raw/master/markdown/image-20231210212004029.5c0rr137kf.webp)
 
 ```shell
 git add 1.txt
 git commit -m "7 commit"
 ```
 
-![image-20231210212123002](https://github.com/Junhiee/picx-images-hosting/raw/master/markdown/image-20231210212123002.6pnav2e9ld.webp)
+![image-20231210212123002](https://github.com/koko-t7i/picx-images-hosting/raw/master/markdown/image-20231210212123002.6pnav2e9ld.webp)
 
 如果 testing 想要合并 master 同理即可
 
@@ -278,7 +278,7 @@ git commit -m "7.txt"
 git rebase master
 ```
 
-![image-20231210230728717](https://github.com/Junhiee/picx-images-hosting/raw/master/markdown/image-20231210230728717.6pnav2e9lf.webp)
+![image-20231210230728717](https://github.com/koko-t7i/picx-images-hosting/raw/master/markdown/image-20231210230728717.6pnav2e9lf.webp)
 
 11. 远程 git remote
 
@@ -288,7 +288,7 @@ git rebase master
 git init
 git add .
 git commit -m "initial commit"
-git remote add origin git@github.com:Junhiee/Anitale-Vue.git
+git remote add origin git@github.com:koko-t7i/Anitale-Vue.git
 git push -u origin main
 ```
 
